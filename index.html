@@ -1,0 +1,2822 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="胡招财 — 数据分析师个人简历" />
+<title>胡招财 | 数据分析师</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+:root {
+  --bg: #fafafa;
+  --card: #ffffff;
+  --ink: #1a1a2e;
+  --muted: #6b7280;
+  --accent: #10b981;
+  --accent-light: #d1fae5;
+  --accent-dark: #059669;
+  --lavender: #8b5cf6;
+  --lavender-light: #ede9fe;
+  --radius: 20px;
+  --shadow: 0 4px 24px rgba(0,0,0,0.06);
+  --shadow-hover: 0 12px 40px rgba(0,0,0,0.12);
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  font-family: var(--font);
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Top Navigation */
+.topnav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topnav-logo {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.topnav-links {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.topnav-links button {
+  padding: 0.6rem 1.2rem;
+  border-radius: 100px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--muted);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: var(--font);
+}
+
+.topnav-links button:hover {
+  background: rgba(16,185,129,0.1);
+  color: var(--accent-dark);
+}
+
+.topnav-links button.active {
+  background: var(--accent);
+  color: white;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f0fdf4 0%, #ede9fe 50%, #fef3c7 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(16,185,129,0.15) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -20%;
+  left: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(139,92,246,0.1) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-text {
+  animation: fadeInUp 0.8s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.2rem;
+  background: var(--card);
+  border-radius: 100px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent-dark);
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.hero-badge::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: var(--accent);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.03em;
+}
+
+.hero h1 .highlight {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--lavender) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: var(--muted);
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.meta-tag {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  background: var(--card);
+  border-radius: 100px;
+  font-size: 0.85rem;
+  color: var(--muted);
+  box-shadow: var(--shadow);
+}
+
+.meta-tag svg {
+  width: 16px;
+  height: 16px;
+  opacity: 0.6;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: -0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1rem 2rem;
+  border-radius: 100px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  font-family: var(--font);
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: white;
+  box-shadow: 0 4px 20px rgba(16,185,129,0.3);
+}
+
+.btn-primary:hover {
+  background: var(--accent-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(16,185,129,0.4);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--ink);
+  border: 2px solid var(--ink);
+}
+
+.btn-outline:hover {
+  background: var(--ink);
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* Avatar */
+.hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeInUp 0.8s ease 0.2s both;
+}
+
+.avatar-container {
+  position: relative;
+  width: 360px;
+  height: 400px;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  background: transparent;
+  position: relative;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.avatar-ellipse {
+  position: absolute;
+  inset: -70px -80px;
+  border: 3px dashed #10b981;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  animation: spin 20s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 6rem;
+  font-weight: 800;
+  color: var(--accent);
+  background: linear-gradient(135deg, var(--accent-light) 0%, var(--lavender-light) 100%);
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  z-index: 201;
+  background: var(--card);
+  border-radius: 24px;
+  width: 90%;
+  max-width: 750px;
+  max-height: 80vh;
+  overflow: hidden;
+  box-shadow: var(--shadow-hover);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+  position: sticky;
+  top: 0;
+  background: var(--card);
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.modal-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.modal-title-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--accent-light);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.modal-close {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f3f4f6;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--muted);
+  transition: all 0.2s ease;
+}
+
+.modal-close:hover {
+  background: #e5e7eb;
+  color: var(--ink);
+  transform: rotate(90deg);
+}
+
+.modal-body {
+  padding: 2rem;
+  overflow-y: auto;
+  max-height: calc(80vh - 80px);
+}
+
+/* Modal Content Styles */
+.modal-body .section {
+  margin-bottom: 2rem;
+}
+
+.modal-body .section:last-child {
+  margin-bottom: 0;
+}
+
+.modal-body .section-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.modal-body .section-title::before {
+  content: '';
+  width: 4px;
+  height: 18px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+/* Project Cards in Modal */
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.project-item {
+  background: #f9fafb;
+  border-radius: 16px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.project-item:hover {
+  border-color: var(--accent);
+  background: var(--accent-light);
+  transform: translateX(8px);
+}
+
+.project-item-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.project-item-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.project-item-company {
+  font-size: 0.85rem;
+  color: var(--accent-dark);
+  font-weight: 600;
+  margin-top: 0.25rem;
+}
+
+.project-item-time {
+  font-size: 0.8rem;
+  color: var(--muted);
+  background: var(--card);
+  padding: 0.3rem 0.8rem;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+.project-item-desc {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.project-item-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.project-tag {
+  padding: 0.3rem 0.8rem;
+  background: var(--card);
+  color: var(--accent-dark);
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* Detail Panel */
+.detail-panel {
+  display: none;
+}
+
+.detail-panel.active {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.detail-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #f3f4f6;
+  border: none;
+  border-radius: 100px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--muted);
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  transition: all 0.2s ease;
+  font-family: var(--font);
+}
+
+.detail-back:hover {
+  background: #e5e7eb;
+  color: var(--ink);
+}
+
+.detail-content h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 1.5rem 0 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.detail-content h3:first-child {
+  margin-top: 0;
+}
+
+.detail-content ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.detail-content li {
+  margin-bottom: 0.6rem;
+  color: var(--muted);
+  line-height: 1.7;
+  position: relative;
+}
+
+.detail-content li::marker {
+  color: var(--accent);
+}
+
+/* Project Detail Panel */
+#projectDetailPanel {
+  display: none;
+}
+
+#projectDetailPanel.active {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.skill-card {
+  background: #f9fafb;
+  padding: 1.25rem;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+  background: var(--accent-light);
+  transform: translateY(-4px);
+}
+
+.skill-card-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--card);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+  box-shadow: var(--shadow);
+}
+
+.skill-card-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.skill-card-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.skill-item {
+  padding: 0.3rem 0.7rem;
+  background: var(--card);
+  border-radius: 8px;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.skill-tag {
+  padding: 0.4rem 0.9rem;
+  background: linear-gradient(135deg, var(--accent-light), #d1fae5);
+  color: var(--accent-dark);
+  border-radius: 100px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.skill-detail {
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.6;
+  padding-left: 0.5rem;
+  border-left: 2px solid #e5e7eb;
+}
+
+.skill-detail p {
+  margin-bottom: 0.25rem;
+}
+
+.skill-detail p:last-child {
+  margin-bottom: 0;
+}
+
+/* Skill Chart */
+.skill-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.skill-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.skill-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  font-size: 0.85rem;
+}
+
+.skill-bar::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: var(--width);
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent), var(--lavender));
+  border-radius: 2px;
+}
+
+.skill-bar {
+  position: relative;
+  padding-bottom: 0.8rem;
+}
+
+.skill-bar span:last-child {
+  font-weight: 600;
+  color: var(--accent-dark);
+}
+
+/* Work List */
+.work-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.work-item {
+  background: #f9fafb;
+  padding: 1.5rem;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.work-item:hover {
+  background: var(--accent-light);
+  transform: translateX(8px);
+}
+
+.work-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.work-item-company {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.work-item-time {
+  font-size: 0.85rem;
+  color: var(--muted);
+  background: var(--card);
+  padding: 0.3rem 0.8rem;
+  border-radius: 100px;
+}
+
+.work-item-position {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent-dark);
+  margin-bottom: 0.5rem;
+}
+
+.work-item-desc {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.project-card {
+  background: var(--card);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+}
+
+.project-cover {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+}
+
+.project-info {
+  padding: 1rem;
+}
+
+.project-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.project-desc {
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* Education */
+.edu-content {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f0fdf4 0%, #ede9fe 100%);
+  border-radius: 20px;
+}
+
+.edu-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.edu-school {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.edu-major {
+  color: var(--accent-dark);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.edu-time {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.edu-courses {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.edu-course {
+  padding: 0.4rem 1rem;
+  background: var(--card);
+  color: var(--lavender);
+  border-radius: 100px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  box-shadow: var(--shadow);
+}
+
+.edu-honors {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+.edu-honors h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--ink);
+}
+
+.honor-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.honor-item {
+  padding: 0.4rem 1rem;
+  background: #fff;
+  color: #ec4899;
+  border: 1px solid #fce7f3;
+  border-radius: 100px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Work Page */
+.work-page {
+  position: fixed;
+  inset: 0;
+  z-index: 150;
+  background: var(--bg);
+  overflow-y: auto;
+  transform: translateX(100%);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.work-page.active {
+  transform: translateX(0);
+}
+
+.work-page-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 2rem 4rem;
+}
+
+.work-page-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  background: var(--card);
+  border: none;
+  border-radius: 100px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--muted);
+  cursor: pointer;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+  transition: all 0.2s ease;
+  font-family: var(--font);
+}
+
+.work-page-back:hover {
+  background: var(--accent-light);
+  color: var(--accent-dark);
+}
+
+.work-page-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 3rem;
+  letter-spacing: -0.02em;
+}
+
+.work-section {
+  background: var(--card);
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.work-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.work-section-info {
+  flex: 1;
+}
+
+.work-section-company {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 0.25rem;
+}
+
+.work-section-time {
+  font-size: 0.85rem;
+  color: var(--muted);
+  background: #f3f4f6;
+  padding: 0.3rem 0.8rem;
+  border-radius: 100px;
+  display: inline-block;
+}
+
+.work-section-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.work-section-number {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--accent);
+  opacity: 0.2;
+  line-height: 1;
+}
+
+.work-section-position {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent-dark);
+  margin-bottom: 0.75rem;
+}
+
+.work-section-desc {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.work-desc-title {
+  font-weight: 700;
+  color: var(--lavender);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.work-desc-content {
+  display: block;
+  padding-left: 2em;
+  margin-bottom: 0.5rem;
+}
+
+.work-section-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.work-section-divider::before,
+.work-section-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #e5e7eb;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.project-mini-card {
+  background: #f9fafb;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.project-mini-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.project-mini-cover {
+  height: 140px;
+  overflow: hidden;
+  background: #f9fafb;
+}
+
+.project-mini-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+}
+
+.project-mini-info {
+  padding: 1rem;
+}
+
+.project-mini-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.project-mini-desc {
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+}
+
+.project-mini-btn {
+  width: calc(100% - 2rem);
+  margin: 0 1rem 1rem;
+  padding: 0.5rem;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: var(--font);
+}
+
+.project-mini-btn:hover {
+  background: var(--accent-dark);
+}
+
+/* Project Modal */
+.project-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 250;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.project-modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.project-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  z-index: 251;
+  background: var(--card);
+  border-radius: 24px;
+  width: 90%;
+  max-width: 1200px;
+  max-height: 80vh;
+  overflow: hidden;
+  box-shadow: var(--shadow-hover);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.project-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.9);
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--muted);
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.project-modal-close:hover {
+  background: white;
+  color: var(--ink);
+  transform: rotate(90deg);
+}
+
+.project-modal-body {
+  display: flex;
+  height: calc(80vh - 20px);
+}
+
+.project-modal-left {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+  min-width: 0;
+}
+
+.project-modal-right {
+  width: 600px;
+  background: linear-gradient(135deg, var(--accent-light), var(--lavender-light));
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  position: relative;
+}
+
+.project-modal-image-placeholder {
+  text-align: center;
+  color: var(--accent-dark);
+  opacity: 0.6;
+}
+
+.project-modal-image-placeholder svg {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 1rem;
+}
+
+.project-modal-image-placeholder p {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.project-modal-images {
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+
+.project-image-compare {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 100%;
+}
+
+.project-image-before,
+.project-image-after {
+  flex: 1;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f9fafb;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-image-label {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 100px;
+  z-index: 5;
+}
+
+.project-image-before img,
+.project-image-after img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  background: #f9fafb;
+}
+
+.project-image-before img:hover,
+.project-image-after img:hover {
+  transform: scale(1.02);
+}
+
+.project-image-name {
+  display: none;
+}
+
+.project-image-single {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f9fafb;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-image-single img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.project-image-single img:hover {
+  transform: scale(1.02);
+}
+
+.project-image-triple {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  height: 100%;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+
+.project-image-item {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #f9fafb;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-image-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  display: block;
+}
+
+.project-image-item img:hover {
+  transform: scale(1.02);
+}
+
+.project-modal-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.project-modal-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.project-modal-tag {
+  padding: 0.3rem 0.8rem;
+  background: var(--accent-light);
+  color: var(--accent-dark);
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.project-modal-section {
+  margin-bottom: 1.5rem;
+}
+
+.project-modal-section:last-child {
+  margin-bottom: 0;
+}
+
+.project-modal-section-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.project-modal-section-title::before {
+  content: '';
+  width: 4px;
+  height: 16px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+.project-modal-section-content {
+  padding-left: 1rem;
+  border-left: 2px solid #e5e7eb;
+}
+
+.project-modal-section-content p {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 0.5rem;
+}
+
+.project-modal-section-content p:last-child {
+  margin-bottom: 0;
+}
+
+.project-modal-highlight {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: linear-gradient(135deg, #f0fdf4, #ede9fe);
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent-dark);
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .project-modal-body {
+    flex-direction: column;
+  }
+  
+  .project-modal-right {
+    width: 100%;
+    height: 150px;
+  }
+}
+.learn-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.learn-card {
+  background: #f9fafb;
+  padding: 1.25rem;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.learn-card:hover {
+  background: var(--lavender-light);
+  transform: translateY(-4px);
+}
+
+.learn-card-icon {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.learn-card-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.learn-card-desc {
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.learn-content {
+  padding: 0.5rem;
+}
+
+.learn-card-new {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: linear-gradient(135deg, #f0fdf4, #ede9fe);
+  padding: 1.5rem;
+  border-radius: 16px;
+}
+
+.learn-card-new-icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.learn-card-new-info {
+  flex: 1;
+}
+
+.learn-card-new-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--ink);
+}
+
+.learn-card-new-desc {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.learn-detail-btn {
+  padding: 0.6rem 1.2rem;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 100px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  font-family: var(--font);
+}
+
+.learn-detail-btn:hover {
+  background: var(--accent-dark);
+  transform: translateY(-2px);
+}
+
+/* Learn Modal */
+.learn-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.learn-modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.learn-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  z-index: 301;
+  background: var(--card);
+  border-radius: 24px;
+  width: 90%;
+  max-width: 1100px;
+  height: 80vh;
+  overflow: hidden;
+  box-shadow: var(--shadow-hover);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.learn-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.learn-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #f3f4f6;
+  flex-shrink: 0;
+}
+
+.learn-modal-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.learn-modal-close {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f3f4f6;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--muted);
+  transition: all 0.2s ease;
+}
+
+.learn-modal-close:hover {
+  background: #e5e7eb;
+  color: var(--ink);
+}
+
+.learn-modal-body {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.learn-ppt-container {
+  text-align: center;
+  padding: 3rem;
+}
+
+.learn-ppt-icon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.learn-ppt-container h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--ink);
+}
+
+.learn-ppt-container p {
+  font-size: 1rem;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+.learn-ppt-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  background: var(--accent);
+  color: white;
+  border-radius: 100px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.learn-ppt-btn:hover {
+  background: var(--accent-dark);
+  transform: translateY(-2px);
+}
+
+/* Contact */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.contact-card {
+  background: #f9fafb;
+  padding: 1.25rem;
+  border-radius: 16px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+  background: var(--accent-light);
+  transform: translateY(-4px);
+}
+
+.contact-card-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-card-label {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-bottom: 0.25rem;
+}
+
+.contact-card-value {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* Image Lightbox */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.lightbox-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-close:hover {
+  background: rgba(255,255,255,0.2);
+  transform: rotate(90deg);
+}
+
+.lightbox-img {
+  max-width: 90%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 8px;
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+.lightbox-overlay.active .lightbox-img {
+  transform: scale(1);
+}
+
+/* Toast */
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: var(--ink);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 14px;
+  font-weight: 500;
+  box-shadow: var(--shadow-hover);
+  transition: transform 0.3s ease;
+  z-index: 300;
+  font-family: var(--font);
+}
+
+.toast.show {
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 3rem;
+  }
+  
+  .hero-visual {
+    order: -1;
+  }
+  
+  .avatar-container {
+    width: 260px;
+    height: 290px;
+  }
+  
+  .hero-meta {
+    justify-content: center;
+  }
+  
+  .hero-actions {
+    justify-content: center;
+  }
+  
+  .topnav {
+    padding: 1rem;
+  }
+  
+  .topnav-links button {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.8rem;
+  }
+  
+  .modal {
+    width: 95%;
+    max-height: 90vh;
+  }
+  
+  .skills-grid,
+  .learn-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .work-page-inner {
+    padding: 1.5rem 1rem 3rem;
+  }
+  
+  .work-page-title {
+    font-size: 2rem;
+  }
+  
+  .work-section {
+    padding: 1.5rem;
+  }
+  
+  .work-section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .work-section-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .work-section-company {
+    font-size: 1.2rem;
+  }
+  
+  .work-section-number {
+    font-size: 2rem;
+  }
+  
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="#" class="topnav-logo">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 2C9.5 2 8 3.5 8 5.5C8 7.5 9.5 9 12 9C14.5 9 16 7.5 16 5.5C16 3.5 14.5 2 12 2Z" fill="#34d399"/>
+      <path d="M12 9C7 9 3 13 3 18C3 20 4 22 6 22C8 22 9 21 10 20C11 19 12 19 12 19C12 19 13 19 14 20C15 21 16 22 18 22C20 22 21 20 21 18C21 13 17 9 12 9Z" fill="#10b981"/>
+      <path d="M12 2C12 2 13 1 14 2C15 3 14 4 14 4" stroke="#059669" stroke-width="1.5" stroke-linecap="round"/>
+    </svg>
+  </a>
+  <div class="topnav-links">
+    <button class="active" data-section="about">关于我</button>
+    <button data-section="education">教育背景</button>
+    <button data-section="work">工作经历</button>
+    <button data-section="skills">技能特长</button>
+    <button data-section="learn">学习探索</button>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <h1>Hi，我是<span class="highlight">胡招财</span></h1>
+      <p style="font-size:1.5rem;font-weight:700;color:var(--lavender);margin-bottom:0.5rem;">数据运营 & 数据分析师</p>
+      <p class="hero-subtitle">2年+数字化落地与数据分析经验<br>擅长数据驱动决策，从0到1搭建数据体系</p>
+      <div class="hero-meta">
+        <div class="meta-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          17397965917
+        </div>
+        <div class="meta-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          1812604460@qq.com
+        </div>
+        <div class="meta-tag">26岁</div>
+        <div class="meta-tag">本科</div>
+      </div>
+      <div class="hero-actions">
+        <a href="胡招财简历.pdf" class="btn btn-primary" download="胡招财简历.pdf">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          下载简历
+        </a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="avatar-container">
+        <div class="avatar">
+          <img src="portraits/avatar.png" alt="胡招财" onerror="this.src='portraits/avatar.jpg'">
+          <div class="avatar-ellipse"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Work Experience Full Page -->
+<section class="work-page" id="workPage">
+  <div class="work-page-inner">
+    <button class="work-page-back" id="workPageBack">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      返回首页
+    </button>
+    <h2 class="work-page-title">工作经历</h2>
+    
+    <div class="work-section">
+      <div class="work-section-header">
+        <div class="work-section-info">
+          <div class="work-section-company">优车联动（南京）科技有限公司</div>
+          <div class="work-section-position">数据运营</div>
+        </div>
+        <div class="work-section-right">
+          <div class="work-section-time">2023.11 — 2026.02</div>
+          <div class="work-section-number">01</div>
+        </div>
+      </div>
+      <div class="work-section-desc">
+        <span class="work-desc-title">从0到1指标体系搭建与经营管理：</span>
+        <span class="work-desc-content">搭建覆盖销售、运营、资产、财务4大业务线的经营指标体系，统一数据口径，支撑管理层经营决策与业务标准化管理。</span>
+        <span class="work-desc-content">搭建维护全业务线经营可视化看板，覆盖人效、转化、成本、利润等核心经营模块，支撑公司周/月度经营数据汇报，实现指标异常实时监控与优化建议输出。</span>
+      </div>
+      <div class="work-section-desc">
+        <span class="work-desc-title">经营分析与专题研究：</span>
+        <span class="work-desc-content">搭建经营分析模型，定位业务瓶颈、成本异常与业绩波动问题，提出结算优化、流程提效等落地方案，降低成本约15%。</span>
+        <span class="work-desc-content">针对业务重点问题开展专题分析，定位流失节点与低效环节，为业务策略制定提供数据支撑。</span>
+      </div>
+      <div class="work-section-desc">
+        <span class="work-desc-title">销售支持与跨部门协同：</span>
+        <span class="work-desc-content">参与销售团队客户管理、指标拆解与达成跟进，协同多部门推进业务落地，搭建激励荣誉体系，支撑销售团队目标达成。</span>
+        <span class="work-desc-content">主导业务流程SOP迭代优化，梳理业务流程与工具操作规范，实现业务全链路标准与自动化，提升整体运营效率约20%。</span>
+      </div>
+      <div class="work-section-desc">
+        <span class="work-desc-title">项目管理与效能优化：</span>
+        <span class="work-desc-content">参与数字化项目全流程管理，推动流程优化；开展数据赋能培训，覆盖80+业务人员。</span>
+      </div>
+      
+      <div class="work-section-divider">项目经历</div>
+      
+      <div class="project-grid">
+        <div class="project-mini-card" onclick="showWorkProject('w1p1')">
+          <div class="project-mini-cover">
+            <img src="portraits/项目图片1.png" alt="前端团队与城市定向绑定">
+          </div>
+          <div class="project-mini-info">
+            <div class="project-mini-title">前端团队与城市定向绑定</div>
+            <div class="project-mini-desc">精细化管控（千帆计划），平衡各城市邀约量</div>
+          </div>
+          <button class="project-mini-btn">查看详情</button>
+        </div>
+        
+        <div class="project-mini-card" onclick="showWorkProject('w1p2')">
+          <div class="project-mini-cover">
+            <img src="portraits/项目图片2.png" alt="前端业务治理与数字化系统重构">
+          </div>
+          <div class="project-mini-info">
+            <div class="project-mini-title">前端业务治理与数字化系统重构</div>
+            <div class="project-mini-desc">重构邀约沟通模式与数据认领机制</div>
+          </div>
+          <button class="project-mini-btn">查看详情</button>
+        </div>
+        
+        <div class="project-mini-card" onclick="showWorkProject('w1p3')">
+          <div class="project-mini-cover">
+            <img src="portraits/项目图片3.png" alt="可视化看板建设">
+          </div>
+          <div class="project-mini-info">
+            <div class="project-mini-title">可视化看板建设</div>
+            <div class="project-mini-desc">搭建全业务线可视化看板，支撑数据汇报</div>
+          </div>
+          <button class="project-mini-btn">查看详情</button>
+        </div>
+        
+        <div class="project-mini-card" onclick="showWorkProject('w1p4')">
+          <div class="project-mini-cover">
+            <img src="portraits/项目图片4.png" alt="指标体系搭建及业务梳理">
+          </div>
+          <div class="project-mini-info">
+            <div class="project-mini-title">指标体系搭建及业务梳理</div>
+            <div class="project-mini-desc">业务逻辑 SOP优化 指标体系搭建</div>
+          </div>
+          <button class="project-mini-btn">查看详情</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="work-section">
+      <div class="work-section-header">
+        <div class="work-section-info">
+          <div class="work-section-company">南京凡企网络科技有限公司</div>
+          <div class="work-section-position">运营专员</div>
+        </div>
+        <div class="work-section-right">
+          <div class="work-section-time">2023.04 — 2023.11</div>
+          <div class="work-section-number">02</div>
+        </div>
+      </div>
+      <div class="work-section-desc">
+        <span class="work-desc-title">电商运营与全链路运营：</span>
+        <span class="work-desc-content">负责网红烘焙品牌有赞商城从0到1孵化，主导店铺搭建、营销活动策划与数据分析，实现单月营销活动最高ROI达4.2，店铺下单转化率提升21%。</span>
+      </div>
+      <div class="work-section-desc">
+        <span class="work-desc-title">数字化系统接入与私域运营：</span>
+        <span class="work-desc-content">主导"1701"音乐酒吧多业态接入有赞系统，设计会员体系与积分商城，通过全链路数据分析与复盘，助力品牌实现营收增长。</span>
+      </div>
+      
+      <div class="work-section-divider">项目经历</div>
+      
+      <div class="project-grid">
+        <div class="project-mini-card" onclick="showWorkProject('w2p1')">
+          <div class="project-mini-cover">
+            <img src="portraits/拿破仑1.jpg" alt="新晋网红烘焙品牌">
+          </div>
+          <div class="project-mini-info">
+            <div class="project-mini-title">新晋网红烘焙品牌0到1线上破局</div>
+            <div class="project-mini-desc">有赞商城从0到1孵化与全链路运营</div>
+          </div>
+          <button class="project-mini-btn">查看详情</button>
+        </div>
+        
+        <div class="project-mini-card" onclick="showWorkProject('w2p2')">
+          <div class="project-mini-cover">
+            <img src="portraits/1701 1.jpg" alt="1701数字化系统" style="object-position: center 37%;">
+          </div>
+          <div class="project-mini-info">
+            <div class="project-mini-title">1701数字化系统接入与私域运营</div>
+            <div class="project-mini-desc">线下到线上数字化转型</div>
+          </div>
+          <button class="project-mini-btn">查看详情</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Project Detail Modal -->
+<div class="project-modal-overlay" id="projectModalOverlay"></div>
+<div class="project-modal" id="projectModal">
+  <button class="project-modal-close" id="projectModalClose">×</button>
+  <div class="project-modal-body">
+    <div class="project-modal-left">
+      <h2 class="project-modal-title" id="projectModalTitle"></h2>
+      <div class="project-modal-tags" id="projectModalTags"></div>
+      <div id="projectModalContent"></div>
+    </div>
+    <div class="project-modal-right" id="projectModalRight">
+      <div class="project-modal-image-placeholder" id="projectModalImagePlaceholder">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+          <circle cx="8.5" cy="8.5" r="1.5"/>
+          <polyline points="21 15 16 10 5 21"/>
+        </svg>
+        <p>项目图片展示区域</p>
+      </div>
+      <div class="project-modal-images" id="projectModalImages" style="display:none;">
+        <div class="project-image-compare">
+          <div class="project-image-before">
+            <span class="project-image-label" id="projectImageLabel1">优化前</span>
+            <img id="projectImageBefore" src="" alt="优化前">
+            <span class="project-image-name" id="projectImageName1"></span>
+          </div>
+          <div class="project-image-after">
+            <span class="project-image-label" id="projectImageLabel2">优化后</span>
+            <img id="projectImageAfter" src="" alt="优化后">
+            <span class="project-image-name" id="projectImageName2"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Overlay -->
+<div class="modal-overlay" id="modalOverlay"></div>
+
+<!-- Modal -->
+<div class="modal" id="modal">
+  <div class="modal-header">
+    <h2 class="modal-title" id="modalTitle">
+      <span class="modal-title-icon" id="modalIcon"></span>
+      <span id="modalTitleText"></span>
+    </h2>
+    <button class="modal-close" id="modalClose">×</button>
+  </div>
+  <div class="modal-body" id="modalBody"></div>
+</div>
+
+<!-- Image Lightbox -->
+<div class="lightbox-overlay" id="lightboxOverlay">
+  <button class="lightbox-close" id="lightboxClose">×</button>
+  <img class="lightbox-img" id="lightboxImg" src="" alt="放大图片">
+</div>
+
+<script>
+const sections = {
+  about: {
+    title: '关于我',
+    icon: '★',
+    content: `
+      <div class="section">
+        <p style="font-size:1.1rem;line-height:1.8;color:var(--muted);margin-bottom:1.5rem;">
+          我是一名数据分析师，关注指标体系、实验评估与可视化落地。喜欢与业务、工程一起把「问题定义 → 数据口径 → 结论行动」串成闭环；也乐于把重复分析沉淀成模板，让团队少加班、少踩坑。
+        </p>
+        <div class="section-title">  核心优势</div>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;">
+          <div style="background:#f9fafb;padding:1rem;border-radius:12px;">
+            <div style="font-weight:700;margin-bottom:0.5rem;">数据体系搭建</div>
+            <div style="font-size:0.9rem;color:var(--muted);">从0到1搭建数据指标体系，统一数据口径</div>
+          </div>
+          <div style="background:#f9fafb;padding:1rem;border-radius:12px;">
+            <div style="font-weight:700;margin-bottom:0.5rem;">可视化看板</div>
+            <div style="font-size:0.9rem;color:var(--muted);">搭建业务看板，支撑周/月度数据汇报</div>
+          </div>
+          <div style="background:#f9fafb;padding:1rem;border-radius:12px;">
+            <div style="font-weight:700;margin-bottom:0.5rem;">经营分析</div>
+            <div style="font-size:0.9rem;color:var(--muted);">搭建经营模型，输出分析报告驱动决策</div>
+          </div>
+          <div style="background:#f9fafb;padding:1rem;border-radius:12px;">
+            <div style="font-weight:700;margin-bottom:0.5rem;">自动化流程</div>
+            <div style="font-size:0.9rem;color:var(--muted);">搭建自动化流程，实现全链路数据采集</div>
+          </div>
+        </div>
+      </div>
+    `
+  },
+  work: {
+    title: '工作经历',
+    icon: ' ',
+    content: `
+      <div class="work-list">
+        <div class="work-item">
+          <div class="work-item-header">
+            <div class="work-item-company">优车联动（南京）科技有限公司</div>
+            <div class="work-item-time">2023.11 — 2026.02</div>
+          </div>
+          <div class="work-item-position">数据运营</div>
+          <div class="work-item-desc">从0到1搭建公司数据体系，覆盖前端、销售、运营、资产4大业务线，统一数据口径，推动数字化转型。搭建可视化看板与经营分析模型，驱动业务规模化增长。</div>
+        </div>
+        
+        <div class="work-item">
+          <div class="work-item-header">
+            <div class="work-item-company">南京凡企网络科技有限公司</div>
+            <div class="work-item-time">2023.04 — 2023.11</div>
+          </div>
+          <div class="work-item-position">运营专员</div>
+          <div class="work-item-desc">监控店铺流量、转化、复购等核心电商指标，输出运营月报，为客户提供可落地的优化建议，助力客户线上营收提升。</div>
+        </div>
+      </div>
+    `
+  },
+  projects: {
+    title: '项目经历',
+    icon: ' ',
+    content: `
+      <div class="projects-grid">
+        <div class="project-card" onclick="showProjectDetail('proj1')">
+          <div class="project-cover" style="background:linear-gradient(135deg,#d1fae5,#a7f3d0);">
+            <span class="project-cover-icon"> </span>
+          </div>
+          <div class="project-info">
+            <div class="project-title">数据指标体系搭建</div>
+            <div class="project-desc">覆盖4大业务线，统一全公司数据口径</div>
+          </div>
+        </div>
+        
+        <div class="project-card" onclick="showProjectDetail('proj2')">
+          <div class="project-cover" style="background:linear-gradient(135deg,#ede9fe,#c4b5fd);">
+            <span class="project-cover-icon"> ️</span>
+          </div>
+          <div class="project-info">
+            <div class="project-title">可视化看板建设</div>
+            <div class="project-desc">搭建全业务线可视化看板，支撑数据汇报</div>
+          </div>
+        </div>
+        
+        <div class="project-card" onclick="showProjectDetail('proj3')">
+          <div class="project-cover" style="background:linear-gradient(135deg,#fef3c7,#fde68a);">
+            <span class="project-cover-icon"> </span>
+          </div>
+          <div class="project-info">
+            <div class="project-title">经营分析模型</div>
+            <div class="project-desc">搭建提成绩效模型、人效分析模型</div>
+          </div>
+        </div>
+        
+        <div class="project-card" onclick="showProjectDetail('proj4')">
+          <div class="project-cover" style="background:linear-gradient(135deg,#fce7f3,#fbcfe8);">
+            <span class="project-cover-icon"> </span>
+          </div>
+          <div class="project-info">
+            <div class="project-title">绩效体系搭建</div>
+            <div class="project-desc">参与制定员工绩效方案，搭建可视化看板</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="detail-panel" id="projectDetailPanel">
+        <button class="detail-back" onclick="closeProjectDetail()">← 返回列表</button>
+        <div class="detail-content" id="projectDetailContent"></div>
+      </div>
+    `
+  },
+  skills: {
+    title: '技能特长',
+    icon: '⚡',
+    content: `
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <div class="skill-card-title">工具与办公</div>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Excel</span>
+            <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">Tableau</span>
+            <span class="skill-tag">飞书套件</span>
+            <span class="skill-tag">影刀RPA</span>
+          </div>
+          <div class="skill-detail">
+            <p>Excel：函数/数据透视表/可视化</p>
+            <p>飞书：多维表格、仪表盘、自动化推送、任务提醒</p>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <div class="skill-card-title">核心能力</div>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">指标体系搭建</span>
+            <span class="skill-tag">经营分析</span>
+            <span class="skill-tag">专题分析</span>
+            <span class="skill-tag">跨部门协同</span>
+            <span class="skill-tag">流程SOP优化</span>
+            <span class="skill-tag">项目管理</span>
+          </div>
+        </div>
+      </div>
+    `
+  },
+  education: {
+    title: '教育背景',
+    icon: '◎',
+    content: `
+      <div class="edu-content">
+        <div class="edu-icon"> </div>
+        <h3 class="edu-school">常州大学</h3>
+        <p class="edu-major">计算机科学与技术 · 本科</p>
+        <p class="edu-time">2021.09 — 2023.06</p>
+        <div class="edu-courses">
+          <span class="edu-course">C++</span>
+          <span class="edu-course">Python</span>
+          <span class="edu-course">MySQL</span>
+          <span class="edu-course">数据可视化</span>
+          <span class="edu-course">数据分析</span>
+        </div>
+        <div class="edu-honors">
+          <h4>  在校荣誉</h4>
+          <div class="honor-list">
+            <span class="honor-item">国家励志奖学金</span>
+            <span class="honor-item">优秀毕业生</span>
+            <span class="honor-item">优秀论文</span>
+          </div>
+        </div>
+      </div>
+    `
+  },
+  learn: {
+    title: '学习与探索',
+    icon: '📚',
+    content: `
+      <div class="learn-content">
+        <div class="learn-card-new">
+          <div class="learn-card-new-icon"> </div>
+          <div class="learn-card-new-info">
+            <div class="learn-card-new-title">零售门店销售与库存多维数据分析</div>
+            <div class="learn-card-new-desc">通过多维度数据分析，重构门店运营策略，提升销售与库存管理效率</div>
+          </div>
+          <button class="learn-detail-btn" onclick="showLearnDetail()">查看详情</button>
+        </div>
+      </div>
+    `
+  }
+};
+
+const projectDetails = {
+  proj1: {
+    title: '数据指标体系搭建',
+    content: `
+      <h3>项目背景</h3>
+      <p>公司处于快速发展期，缺乏统一的数据体系，各部门数据口径不一致，难以支撑业务决策。</p>
+      
+      <h3>主要工作</h3>
+      <ul>
+        <li>基于全业务流程，搭建覆盖前端、销售、运营、资产4大业务线的数据指标体系</li>
+        <li>统一全公司数据口径，解决跨部门数据不一致问题</li>
+        <li>开展内部数据赋能与培训，覆盖80+业务人员</li>
+        <li>推动业务数据决策转型，提升全员数据驱动意识</li>
+      </ul>
+      
+      <h3>项目成果</h3>
+      <ul>
+        <li>建立统一的数据指标体系，支撑公司周/月度业务汇报</li>
+        <li>实现指标异常实时监控与优化建议输出</li>
+        <li>推动公司数字化转型，提升决策效率</li>
+      </ul>
+    `
+  },
+  proj2: {
+    title: '可视化看板建设',
+    content: `
+      <h3>项目概述</h3>
+      <p>搭建并维护全业务线可视化看板，覆盖对外结算、人效、转化、留存、出租率、运效等核心模块。</p>
+      
+      <h3>核心功能</h3>
+      <ul>
+        <li>支撑公司周/月度业务数据汇报</li>
+        <li>实现指标异常实时监控</li>
+        <li>提供优化建议输出</li>
+        <li>支持多维度数据下钻分析</li>
+      </ul>
+      
+      <h3>技术实现</h3>
+      <ul>
+        <li>使用Tableau/Power BI进行数据可视化</li>
+        <li>搭建自动化数据更新流程</li>
+        <li>设计用户友好的交互界面</li>
+      </ul>
+    `
+  },
+  proj3: {
+    title: '经营分析模型',
+    content: `
+      <h3>模型概述</h3>
+      <p>搭建经营分析模型、提成绩效模型、人效分析模型，为公司经营决策提供数据支持。</p>
+      
+      <h3>模型类型</h3>
+      <ul>
+        <li>经营分析模型：分析公司整体经营状况</li>
+        <li>提成绩效模型：计算员工提成与绩效</li>
+        <li>人效分析模型：评估人员效率与产出</li>
+      </ul>
+      
+      <h3>应用成果</h3>
+      <ul>
+        <li>输出季/年度销售分析报告</li>
+        <li>定位业务问题并提出结算优化方案</li>
+        <li>降低冗余邀约成本</li>
+      </ul>
+    `
+  },
+  proj4: {
+    title: '绩效体系搭建',
+    content: `
+      <h3>项目背景</h3>
+      <p>公司需要建立科学的绩效考核体系，以激励员工并提升整体业务效率。</p>
+      
+      <h3>主要工作</h3>
+      <ul>
+        <li>参与制定员工绩效方案</li>
+        <li>搭建各区域一线人员绩效可视化看板</li>
+        <li>完成核算与专项分析</li>
+        <li>建立绩效数据监控机制</li>
+      </ul>
+      
+      <h3>项目成果</h3>
+      <ul>
+        <li>建立公平透明的绩效考核体系</li>
+        <li>提升员工工作积极性</li>
+        <li>为管理层提供数据化决策支持</li>
+      </ul>
+    `
+  }
+};
+
+let currentSection = 'about';
+
+function openSection(sectionKey) {
+  closeLearnModal();
+  closeWorkProject();
+  
+  if (sectionKey === 'work') {
+    openWorkPage();
+    return;
+  }
+  
+  const section = sections[sectionKey];
+  if (!section) return;
+  
+  currentSection = sectionKey;
+  
+  document.getElementById('modalTitleText').textContent = section.title;
+  document.getElementById('modalIcon').textContent = section.icon;
+  document.getElementById('modalBody').innerHTML = section.content;
+  
+  document.getElementById('modalOverlay').classList.add('active');
+  document.getElementById('modal').classList.add('active');
+  document.body.style.overflow = 'hidden';
+  
+  document.querySelectorAll('.topnav-links button').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.section === sectionKey);
+  });
+}
+
+function openWorkPage() {
+  document.getElementById('workPage').classList.add('active');
+  document.body.style.overflow = 'hidden';
+  
+  document.querySelectorAll('.topnav-links button').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.section === 'work');
+  });
+}
+
+function closeWorkPage() {
+  document.getElementById('workPage').classList.remove('active');
+  document.body.style.overflow = '';
+  
+  document.querySelectorAll('.topnav-links button').forEach(btn => {
+    btn.classList.remove('active');
+  });
+}
+
+document.getElementById('workPageBack').addEventListener('click', closeWorkPage);
+
+const workProjects = {
+  w1p1: {
+    title: '前端团队与城市定向绑定+精细化管控（千帆计划）',
+    tags: ['团队管理', '城市运营', '精细化管控'],
+    sections: [
+      {
+        title: '项目背景',
+        content: '原模式为全国团队随机邀约，出现优质城市资源冗余、弱势城市邀约缺口，到店人数不可控。'
+      },
+      {
+        title: '项目内容',
+        content: '对团队与城市进行分层分档，实行定向绑定；制定差异化激励，建立全流程监控机制。'
+      },
+      {
+        title: '项目结果',
+        content: '平衡各城市邀约、到店量；规范邀约秩序，实现每日到店人数可量化、可管控的同时也提高了成交转化率。'
+      }
+    ],
+    highlight: '1个半月落地闭环',
+    images: {
+      before: 'portraits/原各城市邀约.png',
+      after: 'portraits/后各城市邀约.png',
+      label1: '优化前',
+      label2: '优化后'
+    }
+  },
+  w1p2: {
+    title: '前端业务治理与数字化系统重构',
+    tags: ['业务治理', '数字化', '系统重构'],
+    sections: [
+      {
+        title: '项目背景',
+        content: '原业务依赖社群沟通+手工录入，群结构混乱、数据失真、结算对账低效。'
+      },
+      {
+        title: '项目内容',
+        content: '梳理全业务流程痛点，重构邀约沟通模式与数据认领机制；打通结算数据口径，协同开发完成系统落地与全员培训。'
+      },
+      {
+        title: '项目结果',
+        content: '取缔混乱社群模式，实现业务沟通系统化；根除数据失真问题，为经营分析提供可信数据底座；简化对账流程，提升结算效率。'
+      }
+    ],
+    highlight: '数据失真问题根除',
+    images: {
+      before: 'portraits/系统链路流程.png',
+      after: 'portraits/人员操作手册.png',
+      label1: '系统链路流程',
+      label2: '人员操作手册'
+    }
+  },
+  w1p3: {
+    title: '可视化看板建设',
+    tags: ['数据可视化', '看板搭建', 'BI'],
+    sections: [
+      {
+        title: '项目概述',
+        content: '搭建并维护全业务线可视化看板，覆盖对外结算、人效、转化、留存、出租率、运效等核心模块。'
+      },
+      {
+        title: '核心功能',
+        content: '支撑公司周/月度业务数据汇报；实现指标异常实时监控；提供优化建议输出。'
+      },
+      {
+        title: '技术实现',
+        content: '使用Tableau/Power BI进行数据可视化；搭建自动化数据更新流程。'
+      }
+    ],
+    highlight: '全业务线覆盖',
+    images: {
+      single: 'portraits/业务分析仪表盘.jpg',
+      label: '业务分析仪表盘'
+    }
+  },
+  w1p4: {
+    title: '指标体系搭建及业务梳理',
+    tags: ['业务逻辑', 'SOP优化', '指标体系搭建'],
+    sections: [
+      {
+        title: '项目概述',
+        content: '随着业务扩大，需对各项数据进行统一规划。需搭建经营指标体系。'
+      },
+      {
+        title: '项目内容',
+        content: '通过对公司整体业务逻辑的梳理和SOP的优化，针对各业务线的各项指标搭建指标体系。'
+      },
+      {
+        title: '项目结果',
+        content: '解决数据错误、口径偏差等日常基础数据问题。推动数字化转型。'
+      }
+    ],
+    highlight: '指标体系搭建',
+    images: {
+      before: 'portraits/业务逻辑.png',
+      after: 'portraits/前端SOP优化.png',
+      third: 'portraits/部分指标展示.png',
+      fourth: 'portraits/业务流程拆解.png',
+      label1: '业务逻辑',
+      label2: '前端SOP优化',
+      label3: '部分指标展示',
+      label4: '业务流程拆解'
+    }
+  },
+  w2p1: {
+    title: '网红烘焙品牌"遇见拿破仑"有赞商城从0到1孵化与全链路运营',
+    tags: ['店铺搭建', '营销策划', '数据分析'],
+    sections: [
+      {
+        title: '店铺搭建与种子用户沉淀',
+        content: '深度调研南京本土烘焙市场，协助品牌方完成有赞微商城的搭建与私域定位。针对网红烘焙产品的"高颜值、高复购"属性，通过"开业即会员、首单立减"及社群裂变，在品牌创立初期3个月内快速获取超5,000名高粘性私域种子用户。'
+      },
+      {
+        title: '营销活动策划与高ROI裂变',
+        content: '主导品牌开业、中秋限定、新品首发等全链路营销活动。通过"私域储值送礼"、"三人拼团抢新品"等社交裂变玩法，实现单场活动平均裂变倍率达1.8，单月营销活动最高ROI达4.2。'
+      },
+      {
+        title: '电商数据分析与策略迭代',
+        content: '负责核心电商指标（GMV、转化率、留存率等）的日常监控。通过输出月度经营分析月报，精准定位商品详情页跳出率偏高的痛点，推动品牌方进行视觉迭代与"加购送小样"策略优化，使店铺整体下单转化率提升21%，月度GMV环比平均增长17%。'
+      }
+    ],
+    highlight: '转化率提升21%，GMV月均增长17%',
+    images: {
+      before: 'portraits/拿破仑2.jpg',
+      after: 'portraits/拿破仑3.jpg',
+      noLabel: true
+    }
+  },
+  w2p2: {
+    title: '南京知名Livehouse/酒吧"1701"数字化系统接入与私域精细化运营',
+    tags: ['系统接入', '会员体系', '数据分析'],
+    sections: [
+      {
+        title: '多业态系统接入与打通',
+        content: '作为项目核心负责人，主导"1701"音乐、酒吧等多业态全面接入有赞系统。攻克线下票务、酒吧桌位预订与线上会员系统联动的痛点，完成商品上架、收银打通及流程测试，确保系统平稳上线。'
+      },
+      {
+        title: '会员体系与私域沉淀',
+        content: '结合音乐酒吧圈层文化，利用有赞CRM工具设计"粉丝会员等级+积分商城"体系。针对演出现场、夜间酒吧消费等不同场景，推出差异化电子券，成功将线下散客转化为线上高粘性私域会员，提升复购率。'
+      },
+      {
+        title: '全链路数据分析与复盘',
+        content: '负责系统接入后的业务核心指标追踪。定期输出经营分析报告，分析酒水消费、门票销售及会员画像数据。通过活动全链路复盘，优化演出前夕的精准营销推送策略，助力品牌实现营收增长。'
+      }
+    ],
+    highlight: '多业态数字化转型落地',
+    images: {
+      before: 'portraits/1701 2.jpg',
+      after: 'portraits/1701 3.jpg',
+      noLabel: true
+    }
+  }
+};
+
+function showWorkProject(projectKey) {
+  const project = workProjects[projectKey];
+  if (!project) return;
+  
+  document.getElementById('projectModalTitle').textContent = project.title;
+  
+  const tagsHtml = project.tags.map(tag => `<span class="project-modal-tag">${tag}</span>`).join('');
+  document.getElementById('projectModalTags').innerHTML = tagsHtml;
+  
+  let bodyHtml = '';
+  project.sections.forEach(section => {
+    bodyHtml += `
+      <div class="project-modal-section">
+        <div class="project-modal-section-title">${section.title}</div>
+        <div class="project-modal-section-content">
+          <p>${section.content}</p>
+        </div>
+      </div>
+    `;
+  });
+  
+  if (project.highlight) {
+    bodyHtml += `<div class="project-modal-highlight">✨ ${project.highlight}</div>`;
+  }
+  
+  document.getElementById('projectModalContent').innerHTML = bodyHtml;
+  
+  const placeholder = document.getElementById('projectModalImagePlaceholder');
+  const imagesDiv = document.getElementById('projectModalImages');
+  
+  if (project.images) {
+    placeholder.style.display = 'none';
+    imagesDiv.style.display = 'block';
+    
+    if (project.images.single) {
+      // Single image mode
+      const labelHtml = project.images.noLabel ? '' : `<span class="project-image-label">${project.images.label || '项目图片'}</span>`;
+      imagesDiv.innerHTML = `
+        <div class="project-image-single">
+          ${labelHtml}
+          <img src="${project.images.single}" alt="${project.images.label || '项目图片'}" onclick="openLightbox(this.src)">
+        </div>
+      `;
+    } else if (project.images.third) {
+      // Three or four images mode
+      const label1Html = project.images.noLabel ? '' : `<span class="project-image-label">${project.images.label1 || '图片1'}</span>`;
+      const label2Html = project.images.noLabel ? '' : `<span class="project-image-label">${project.images.label2 || '图片2'}</span>`;
+      const label3Html = project.images.noLabel ? '' : `<span class="project-image-label">${project.images.label3 || '图片3'}</span>`;
+      let imagesHtml = `
+        <div class="project-image-triple">
+          <div class="project-image-item">
+            ${label1Html}
+            <img src="${project.images.before}" alt="${project.images.label1 || '图片1'}" onclick="openLightbox(this.src)">
+          </div>
+          <div class="project-image-item">
+            ${label2Html}
+            <img src="${project.images.after}" alt="${project.images.label2 || '图片2'}" onclick="openLightbox(this.src)">
+          </div>
+          <div class="project-image-item">
+            ${label3Html}
+            <img src="${project.images.third}" alt="${project.images.label3 || '图片3'}" onclick="openLightbox(this.src)">
+          </div>`;
+      if (project.images.fourth) {
+        const label4Html = project.images.noLabel ? '' : `<span class="project-image-label">${project.images.label4 || '图片4'}</span>`;
+        imagesHtml += `
+          <div class="project-image-item">
+            ${label4Html}
+            <img src="${project.images.fourth}" alt="${project.images.label4 || '图片4'}" onclick="openLightbox(this.src)">
+          </div>`;
+      }
+      imagesHtml += `</div>`;
+      imagesDiv.innerHTML = imagesHtml;
+    } else {
+      // Compare mode (two images)
+      const label1Html = project.images.noLabel ? '' : `<span class="project-image-label">${project.images.label1 || '优化前'}</span>`;
+      const label2Html = project.images.noLabel ? '' : `<span class="project-image-label">${project.images.label2 || '优化后'}</span>`;
+      imagesDiv.innerHTML = `
+        <div class="project-image-compare">
+          <div class="project-image-before">
+            ${label1Html}
+            <img src="${project.images.before}" alt="优化前" onclick="openLightbox(this.src)">
+          </div>
+          <div class="project-image-after">
+            ${label2Html}
+            <img src="${project.images.after}" alt="优化后" onclick="openLightbox(this.src)">
+          </div>
+        </div>
+      `;
+    }
+  } else {
+    placeholder.style.display = 'flex';
+    imagesDiv.style.display = 'none';
+  }
+  
+  document.getElementById('projectModalOverlay').classList.add('active');
+  document.getElementById('projectModal').classList.add('active');
+}
+
+function closeWorkProject() {
+  document.getElementById('projectModalOverlay').classList.remove('active');
+  document.getElementById('projectModal').classList.remove('active');
+}
+
+document.getElementById('projectModalClose').addEventListener('click', closeWorkProject);
+document.getElementById('projectModalOverlay').addEventListener('click', closeWorkProject);
+
+function closeModal() {
+  document.getElementById('modalOverlay').classList.remove('active');
+  document.getElementById('modal').classList.remove('active');
+  document.body.style.overflow = '';
+  
+  document.querySelectorAll('.topnav-links button').forEach(btn => {
+    btn.classList.remove('active');
+  });
+}
+
+function initProjectList() {
+  const list = document.getElementById('projectList');
+  const panel = document.getElementById('detailPanel');
+  
+  if (list) {
+    list.querySelectorAll('.project-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const projectKey = item.dataset.project;
+        showProjectDetail(projectKey);
+      });
+    });
+  }
+  
+  const backBtn = document.getElementById('detailBack');
+  if (backBtn) {
+    backBtn.addEventListener('click', () => {
+      list.style.display = '';
+      panel.classList.remove('active');
+    });
+  }
+}
+
+function showProjectDetail(projectKey) {
+  const project = projectDetails[projectKey];
+  if (!project) return;
+  
+  const panel = document.getElementById('projectDetailPanel');
+  const content = document.getElementById('projectDetailContent');
+  
+  if (panel && content) {
+    panel.classList.add('active');
+    content.innerHTML = `<h3>${project.title}</h3>${project.content}`;
+    
+    const grid = document.querySelector('.projects-grid');
+    if (grid) grid.style.display = 'none';
+  }
+}
+
+function closeProjectDetail() {
+  const panel = document.getElementById('projectDetailPanel');
+  if (panel) {
+    panel.classList.remove('active');
+    
+    const grid = document.querySelector('.projects-grid');
+    if (grid) grid.style.display = '';
+  }
+}
+
+document.querySelectorAll('[data-section]').forEach(el => {
+  el.addEventListener('click', () => {
+    openSection(el.dataset.section);
+  });
+});
+
+document.getElementById('modalOverlay').addEventListener('click', closeModal);
+document.getElementById('modalClose').addEventListener('click', closeModal);
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeModal();
+});
+
+function showToast(msg) {
+  const toast = document.getElementById('toast');
+  toast.textContent = msg;
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 3000);
+}
+
+// Image Lightbox
+function openLightbox(imgSrc) {
+  document.getElementById('lightboxImg').src = imgSrc;
+  document.getElementById('lightboxOverlay').classList.add('active');
+}
+
+function closeLightbox() {
+  document.getElementById('lightboxOverlay').classList.remove('active');
+}
+
+document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+document.getElementById('lightboxOverlay').addEventListener('click', function(e) {
+  if (e.target === this) closeLightbox();
+});
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    closeLightbox();
+    closeLearnModal();
+  }
+});
+
+document.querySelectorAll('.project-image-before img, .project-image-after img').forEach(function(img) {
+  img.addEventListener('click', function() {
+    openLightbox(this.src);
+  });
+});
+
+function showLearnDetail() {
+  document.getElementById('learnModalOverlay').classList.add('active');
+  document.getElementById('learnModal').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLearnModal() {
+  document.getElementById('learnModalOverlay').classList.remove('active');
+  document.getElementById('learnModal').classList.remove('active');
+  document.body.style.overflow = '';
+}
+</script>
+
+<!-- Learn Detail Modal -->
+<div class="learn-modal-overlay" id="learnModalOverlay"></div>
+<div class="learn-modal" id="learnModal">
+  <div class="learn-modal-header">
+    <h2 class="learn-modal-title">零售门店销售与库存多维数据分析</h2>
+    <button class="learn-modal-close" id="learnModalClose">×</button>
+  </div>
+  <div class="learn-modal-body">
+    <div class="learn-ppt-container">
+      <div class="learn-ppt-icon"> </div>
+      <h3>数据分析报告模板</h3>
+      <p>请使用PowerPoint打开查看完整内容</p>
+      <a href="数据分析报告模板.pptx" class="learn-ppt-btn" download>下载PPT文件</a>
+    </div>
+  </div>
+</div>
+
+<script>
+document.getElementById('learnModalClose').addEventListener('click', closeLearnModal);
+document.getElementById('learnModalOverlay').addEventListener('click', function(e) {
+  if (e.target === this) closeLearnModal();
+});
+</script>
+
+</body>
+</html>
